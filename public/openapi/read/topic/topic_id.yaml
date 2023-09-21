@@ -42,6 +42,8 @@ get:
                     nullable: true
                   titleRaw:
                     type: string
+                  isAnonymous:
+                    type: boolean
                   tags:
                     type: array
                     items:
