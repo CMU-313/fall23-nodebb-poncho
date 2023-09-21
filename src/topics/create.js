@@ -33,9 +33,11 @@ module.exports = function (Topics) {
             lastposttime: 0,
             postcount: 0,
             viewcount: 0,
+            isAnonymous: false
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
+            topicData.isAnonymous = data.tags.includes("anonymous") || data.tags.includes("Anonymous")
             topicData.tags = data.tags.join(',');
         }
 
@@ -82,7 +84,6 @@ module.exports = function (Topics) {
 
         data.title = String(data.title).trim();
         data.tags = data.tags || [];
-        data.isAnonymous = data.tags.includes("anonymous")
         if (data.content) {
             data.content = utils.rtrim(data.content);
         }
