@@ -37,7 +37,6 @@ module.exports = function (Topics) {
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
-            topicData.isAnonymous = data.tags.includes("anonymous") || data.tags.includes("Anonymous")
             topicData.tags = data.tags.join(',');
         }
 
