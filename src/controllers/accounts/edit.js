@@ -20,6 +20,7 @@ editController.get = async function (req, res, next) {
     }
     userData.maximumSignatureLength = meta.config.maximumSignatureLength;
     userData.maximumAboutMeLength = meta.config.maximumAboutMeLength;
+    userData.maximumMyCoursesLength = meta.config.maximumMyCoursesLength;
     userData.maximumProfileImageSize = meta.config.maximumProfileImageSize;
     userData.allowProfilePicture = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:profile-picture'];
     userData.allowCoverPicture = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:cover-picture'];
@@ -29,6 +30,7 @@ editController.get = async function (req, res, next) {
     userData.allowAccountDelete = meta.config.allowAccountDelete === 1;
     userData.allowWebsite = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:website'];
     userData.allowAboutMe = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:aboutme'];
+    userData.allowMyCourses = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:mycourses'];   
     userData.allowSignature = canUseSignature && (!userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:signature']);
     userData.profileImageDimension = meta.config.profileImageDimension;
     userData.defaultAvatar = user.getDefaultAvatar();

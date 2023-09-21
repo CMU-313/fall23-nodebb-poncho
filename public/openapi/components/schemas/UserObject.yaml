@@ -65,6 +65,12 @@ UserObject:
         and I'd like to take a minute and sit right here,
         to tell you all about how I became the administrator of NodeBB
       nullable: true
+    mycourses:
+      type: string
+      example: |
+        17-313 Principles of Software Engineering
+        15-213 Introduction to Computer Systems
+      nullable: true
     signature:
       type: string
       example: |
@@ -171,6 +177,7 @@ UserObject:
     - birthday
     - website
     - aboutme
+    - mycourses
     - signature
     - uploadedpicture
     - profileviews
@@ -260,6 +267,11 @@ UserObjectFull:
         This is a paragraph all about how my life got twist-turned upside-down
         and I'd like to take a minute and sit right here,
         to tell you all about how I became the administrator of NodeBB
+    mycourses:
+      type: string
+      example: |
+        17-313 Principles of Software Engineering
+        15-213 Introduction to Computer Systems
     signature:
       type: string
       example: |
@@ -353,6 +365,8 @@ UserObjectFull:
       description: An ISO 8601 formatted date string representing the moment a ban will be lifted, or the words "Not Banned"
       example: Not Banned
     aboutmeParsed:
+      type: string
+    mycoursesParsed:
       type: string
     age:
       type: number

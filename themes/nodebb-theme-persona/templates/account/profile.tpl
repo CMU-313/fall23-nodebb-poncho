@@ -31,6 +31,10 @@
         <span component="aboutme" class="text-center aboutme">{aboutmeParsed}</span>
         <!-- ENDIF aboutme -->
 
+        <!-- IF mycourses -->
+        <span component="mycourses" class="text-center mycourses">{mycoursesParsed}</span>
+        <!-- ENDIF mycourses -->
+
         <div class="account-stats">
             <!-- IF !reputation:disabled -->
             <div class="stat">

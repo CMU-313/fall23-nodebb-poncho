@@ -22,7 +22,7 @@ module.exports = function (User) {
     const fieldWhitelist = [
         'uid', 'username', 'userslug', 'email', 'email:confirmed', 'joindate', 'accounttype',
         'lastonline', 'picture', 'icon:bgColor', 'fullname', 'location', 'birthday', 'website',
-        'aboutme', 'signature', 'uploadedpicture', 'profileviews', 'reputation',
+        'aboutme', 'mycourses', 'signature', 'uploadedpicture', 'profileviews', 'reputation',
         'postcount', 'topiccount', 'lastposttime', 'banned', 'banned:expire',
         'status', 'flags', 'followerCount', 'followingCount', 'cover:url',
         'cover:position', 'groupTitle', 'mutedUntil', 'mutedReason',

@@ -73,6 +73,10 @@
                 <input type="text" class="form-control" placeholder="0" data-field="min:rep:aboutme" id="min:rep:aboutme">
             </div>
             <div class="form-group">
+                <label for="min:rep:mycourses">[[admin/settings/reputation:min-rep-mycourses]]</label>
+                <input type="text" class="form-control" placeholder="0" data-field="min:rep:mycourses" id="min:rep:mycourses">
+            </div>
+            <div class="form-group">
                 <label for="min:rep:signature">[[admin/settings/reputation:min-rep-signature]]</label>
                 <input type="text" class="form-control" placeholder="0" data-field="min:rep:signature" id="min:rep:signature">
             </div>

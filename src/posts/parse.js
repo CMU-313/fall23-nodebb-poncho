@@ -149,6 +149,11 @@ module.exports = function (Posts) {
         });
 
         plugins.hooks.register('core', {
+            hook: 'filter:parse.mycourses',
+            method: async content => Posts.sanitize(content),
+        });
+
+        plugins.hooks.register('core', {
             hook: 'filter:parse.signature',
             method: async (data) => {
                 data.userData.signature = Posts.sanitize(data.userData.signature);

@@ -16,7 +16,7 @@ module.exports = function (User) {
     User.updateProfile = async function (uid, data, extraFields) {
         let fields = [
             'username', 'email', 'fullname', 'website', 'location',
-            'groupTitle', 'birthday', 'signature', 'aboutme',
+            'groupTitle', 'birthday', 'signature', 'aboutme', 'mycourses',
         ];
         if (Array.isArray(extraFields)) {
             fields = _.uniq(fields.concat(extraFields));
@@ -77,6 +77,7 @@ module.exports = function (User) {
         await isUsernameAvailable(data, data.uid);
         await isWebsiteValid(callerUid, data);
         await isAboutMeValid(callerUid, data);
+        await isMyCoursesValid(callerUid, data);
         await isSignatureValid(callerUid, data);
         isFullnameValid(data);
         isLocationValid(data);
@@ -159,6 +160,17 @@ module.exports = function (User) {
         }
 
         await User.checkMinReputation(callerUid, data.uid, 'min:rep:aboutme');
+    }
+
+    async function isMyCoursesValid(callerUid, data) {
+        if (!data.mycourses) {
+            return;
+        }
+        if (data.mycourses !== undefined && data.mycourses.length > meta.config.maximumMyCoursesLength) {
+            throw new Error(`[[error:about-me-too-long, ${meta.config.maximumMyCoursesLength}]]`);
+        }
+
+        await User.checkMinReputation(callerUid, data.uid, 'min:rep:mycourses');
     }
 
     async function isSignatureValid(callerUid, data) {
