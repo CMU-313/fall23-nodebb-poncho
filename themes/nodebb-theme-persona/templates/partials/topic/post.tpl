@@ -14,6 +14,7 @@
     </div>
 
     <small class="pull-left">
+        <!-- This segment checks if the user is anonymous or not. If the user is anonymous, it displays "Anonymous." If the user is not anonymous, it creates a link to the user's profile with the user's display name and username -->
         <strong>
             {{isAdminOrMod}} 
             {{{if isAnonymous}}}
@@ -25,8 +26,6 @@
             
 
         </strong>
-
-        <!-- This code checks if the user is anonymous or not. If the user is anonymous, it displays "Anonymous." If the user is not anonymous, it creates a link to the user's profile with the user's display name and username -->
 
 
         <!-- IMPORT partials/topic/badge.tpl -->
