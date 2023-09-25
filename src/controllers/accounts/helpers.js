@@ -27,6 +27,8 @@ helpers.getUserDataByUserSlug = async function (userslug, callerUID, query = {})
         throw new Error('[[error:invalid-uid]]');
     }
     await parseAboutMe(results.userData);
+    await parseMyCourses(results.userData);
+
 
     let { userData } = results;
     const { userSettings } = results;
@@ -242,6 +244,18 @@ async function parseAboutMe(userData) {
     const parsed = await plugins.hooks.fire('filter:parse.aboutme', userData.aboutme);
     userData.aboutme = translator.escape(userData.aboutme);
     userData.aboutmeParsed = translator.escape(parsed);
+}
+
+async function parseMyCourses(userData) {
+    if (!userData.mycourses) {
+        userData.mycourses = '';
+        userData.mycoursesParsed = '';
+        return;
+    }
+    userData.mycourses = validator.escape(String(userData.mycourses || ''));
+    const parsed = await plugins.hooks.fire('filter:parse.mycourses', userData.mycourses);
+    userData.mycourses = translator.escape(userData.mycourses);
+    userData.mycoursesParsed = translator.escape(parsed);
 }
 
 function filterLinks(links, states) {

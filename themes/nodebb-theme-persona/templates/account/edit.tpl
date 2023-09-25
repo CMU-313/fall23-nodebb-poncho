@@ -95,6 +95,14 @@
                     </div>
                     <!-- ENDIF allowAboutMe -->
 
+
+                    <!-- IF allowMyCourses -->
+                    <div class="form-group">
+                        <label for="mycourses">[[user:mycourses]]</label> <small><label id="myCoursesCharCountLeft"></label></small>
+                        <textarea class="form-control" id="mycourses" name="mycourses" rows="5">{mycourses}</textarea>
+                    </div>
+                    <!-- ENDIF allowMyCourses -->
+
                     <!-- IF allowSignature -->
                     <!-- IF !disableSignatures -->
                     <div class="form-group">

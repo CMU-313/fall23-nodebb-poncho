@@ -165,6 +165,7 @@
     "not-enough-reputation-to-flag": "You need %1 reputation to flag this post",
     "not-enough-reputation-min-rep-website": "You need %1 reputation to add a website",
     "not-enough-reputation-min-rep-aboutme": "You need %1 reputation to add an about me",
+    "not-enough-reputation-min-rep-mycourses": "You need %1 reputation to add a my courses",
     "not-enough-reputation-min-rep-signature": "You need %1 reputation to add a signature",
     "not-enough-reputation-min-rep-profile-picture": "You need %1 reputation to add a profile picture",
     "not-enough-reputation-min-rep-cover-picture": "You need %1 reputation to add a cover picture",

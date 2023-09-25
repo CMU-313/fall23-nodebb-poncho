@@ -23,6 +23,8 @@ get:
                     type: number
                   maximumAboutMeLength:
                     type: number
+                  maximumMyCoursesLength:
+                    type: number
                   maximumProfileImageSize:
                     type: number
                   allowProfilePicture:
@@ -40,6 +42,8 @@ get:
                   allowWebsite:
                     type: boolean
                   allowAboutMe:
+                    type: boolean
+                  allowMyCourses:
                     type: boolean
                   allowSignature:
                     type: boolean

@@ -47,6 +47,11 @@ UserObj:
         This is a paragraph all about how my life got twist-turned upside-down
         and I'd like to take a minute and sit right here,
         to tell you all about how I because the administrator of NodeBB
+    mycourses:
+      type: string
+      example: |
+        17-313 Principles of Software Engineering
+        15-213 Introduction to Computer Systems
     signature:
       type: string
       example: |

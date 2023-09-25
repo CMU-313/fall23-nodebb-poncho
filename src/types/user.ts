@@ -38,6 +38,7 @@ export type UserObject = UserObjectSlim & {
   birthday: string;
   website: string;
   aboutme: string;
+  mycourses: string;
   signature: string;
   uploadedpicture: string;
   profileviews: number;
@@ -53,6 +54,7 @@ export type UserObject = UserObjectSlim & {
 
 export type UserObjectFull = UserObject & {
   aboutmeParsed: string;
+  mycoursesParsed: string;
   age: number;
   emailClass: string;
   ips: string[];
