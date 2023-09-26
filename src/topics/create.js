@@ -15,6 +15,12 @@ const privileges = require('../privileges');
 const categories = require('../categories');
 const translator = require('../translator');
 
+const User = module.exports;
+
+User.isAdministrator = async function (uid) {
+    return await privileges.users.isAdministrator(uid);
+};
+
 module.exports = function (Topics) {
     Topics.create = async function (data) {
         // This is an internal method, consider using Topics.post instead
@@ -33,7 +39,8 @@ module.exports = function (Topics) {
             lastposttime: 0,
             postcount: 0,
             viewcount: 0,
-            isAnonymous: false
+            isAnonymous: false,
+            isAdmin: await User.isAdministrator(data.uid)
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
