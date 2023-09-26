@@ -139,9 +139,8 @@ function modifyTopic(topic, fields) {
             };
         });
     }
-    
+
     if (topic.tags){
-        console.assert(Array.isArray(topic.tags));
         topic.isAnonymous = topic.tags.reduce((a, b) => a || b.value == "anonymous" || b.value == "Anonymous", false);
     }
 }
