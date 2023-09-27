@@ -25,6 +25,7 @@ define('forum/account/edit', [
         handleEmailConfirm();
         updateSignature();
         updateAboutMe();
+        updateMyCourses()
         handleGroupSort();
     };
 
@@ -131,6 +132,15 @@ define('forum/account/edit', [
 
         el.on('keyup change', function () {
             $('#aboutMeCharCountLeft').html(getCharsLeft(el, ajaxify.data.maximumAboutMeLength));
+        });
+    }
+
+    function updateMyCourses() {
+        const el = $('#mycourses');
+        $('#myCoursesCharCountLeft').html(getCharsLeft(el, ajaxify.data.maximumMyCoursesLength));
+
+        el.on('keyup change', function () {
+            $('#myCoursesCharCountLeft').html(getCharsLeft(el, ajaxify.data.maximumMyCoursesLength));
         });
     }
 
