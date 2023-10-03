@@ -193,6 +193,8 @@ TopicObjectSlim:
   allOf:
     - type: object
       properties:
+        isAnonymous:
+          type: boolean
         tid:
           type: number
           description: A topic identifier
