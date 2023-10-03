@@ -25,7 +25,7 @@ define('forum/account/edit', [
         handleEmailConfirm();
         updateSignature();
         updateAboutMe();
-        updateMyCourses()
+        updateMyCourses();
         handleGroupSort();
     };
 

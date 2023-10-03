@@ -30,7 +30,7 @@ editController.get = async function (req, res, next) {
     userData.allowAccountDelete = meta.config.allowAccountDelete === 1;
     userData.allowWebsite = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:website'];
     userData.allowAboutMe = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:aboutme'];
-    userData.allowMyCourses = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:mycourses'];   
+    userData.allowMyCourses = !userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:mycourses'];
     userData.allowSignature = canUseSignature && (!userData.isSelf || !!meta.config['reputation:disabled'] || userData.reputation >= meta.config['min:rep:signature']);
     userData.profileImageDimension = meta.config.profileImageDimension;
     userData.defaultAvatar = user.getDefaultAvatar();

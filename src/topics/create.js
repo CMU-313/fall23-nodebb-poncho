@@ -33,8 +33,7 @@ module.exports = function (Topics) {
             lastposttime: 0,
             postcount: 0,
             viewcount: 0,
-            isAnonymous: false // User is set to "not anonymous" upon initial create. User can later change themselves to be anonymous.
-
+            isAnonymous: false, // User is set to "not anonymous" upon initial create but can change later.
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
