@@ -1,0 +1,34 @@
+{
+	"id": "nodebb-plugin-composer-default",
+	"url": "https://github.com/NodeBB/nodebb-plugin-composer-default",
+	"library": "library.js",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:config.get", "method": "appendConfig" },
+		{ "hook": "filter:composer.build", "method": "filterComposerBuild" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:meta.getLinkTags", "method": "addPrefetchTags" }
+	],
+	"less": [
+		"./static/less/composer.less"
+	],
+	"scripts": [
+		"./static/lib/client.js",
+		"./node_modules/screenfull/dist/screenfull.js"
+	],
+	"modules": {
+		"composer.js": "./static/lib/composer.js",
+		"composer/categoryList.js": "./static/lib/composer/categoryList.js",
+		"composer/controls.js": "./static/lib/composer/controls.js",
+		"composer/drafts.js": "./static/lib/composer/drafts.js",
+		"composer/formatting.js": "./static/lib/composer/formatting.js",
+		"composer/preview.js": "./static/lib/composer/preview.js",
+		"composer/resize.js": "./static/lib/composer/resize.js",
+		"composer/scheduler.js": "./static/lib/composer/scheduler.js",
+		"composer/tags.js": "./static/lib/composer/tags.js",
+		"composer/uploads.js": "./static/lib/composer/uploads.js",
+		"composer/autocomplete.js": "./static/lib/composer/autocomplete.js",
+		"../admin/plugins/composer-default.js": "./static/lib/admin.js"
+	},
+	"templates": "static/templates"
+}
