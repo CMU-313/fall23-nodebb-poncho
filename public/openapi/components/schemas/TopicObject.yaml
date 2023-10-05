@@ -137,6 +137,8 @@ TopicObject:
             index:
               type: number
           nullable: true
+        isAnonymous:
+          type: boolean
         tags:
           type: array
           items:
@@ -191,6 +193,8 @@ TopicObjectSlim:
   allOf:
     - type: object
       properties:
+        isAnonymous:
+          type: boolean
         tid:
           type: number
           description: A topic identifier
