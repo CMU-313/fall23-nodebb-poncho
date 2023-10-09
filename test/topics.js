@@ -54,7 +54,7 @@ describe('Topic\'s', () => {
             categoryId: categoryObj.cid,
             title: 'Test Topic Title',
             content: 'The content of test topic',
-            tags: ['anonymous']
+            tags: ['anonymous'],
         };
     });
 
@@ -78,7 +78,7 @@ describe('Topic\'s', () => {
                 assert.ifError(err);
                 assert(result);
                 topic.tid = result.topicData.tid;
-                done(); 
+                done();
             });
         });
 
@@ -88,11 +88,11 @@ describe('Topic\'s', () => {
                 title: topic.title,
                 content: topic.content,
                 cid: topic.categoryId,
-                tags: topic.tags
+                tags: topic.tags,
             }, (err, result) => {
                 assert.ifError(err);
                 assert(result);
-                assert(result.topicData.isAnonymous)
+                assert(result.topicData.isAnonymous);
                 topic.tid = result.topicData.tid;
                 done();
             });
