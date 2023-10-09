@@ -25,7 +25,7 @@ module.exports = function (User) {
         'aboutme', 'mycourses', 'signature', 'uploadedpicture', 'profileviews', 'reputation',
         'postcount', 'topiccount', 'lastposttime', 'banned', 'banned:expire',
         'status', 'flags', 'followerCount', 'followingCount', 'cover:url',
-        'cover:position', 'groupTitle', 'mutedUntil', 'mutedReason',
+        'cover:position', 'groupTitle', 'mutedUntil', 'mutedReason', 'isadmin',
     ];
 
     User.guestData = {
@@ -42,6 +42,7 @@ module.exports = function (User) {
         status: 'offline',
         reputation: 0,
         'email:confirmed': 0,
+        isadmin: false,
     };
 
     User.getUsersFields = async function (uids, fields) {
@@ -157,6 +158,7 @@ module.exports = function (User) {
             User.isAdministrator(callerUID),
             User.isGlobalModerator(callerUID),
         ]);
+        plugins.hooks.fire('action:user.set', { callerUID, isadmin, isAdmin, type: 'set' });
 
         users = await Promise.all(users.map(async (userData, idx) => {
             const _userData = { ...userData };

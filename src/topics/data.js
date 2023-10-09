@@ -143,5 +143,7 @@ function modifyTopic(topic, fields) {
     if (topic.tags) {
         console.assert(Array.isArray(topic.tags));
         topic.isAnonymous = topic.tags.reduce((a, b) => a || b.value === 'anonymous' || b.value === 'Anonymous', false);
+        topic.isAnonymousStudents = topic.tags.reduce((a, b) => a || b.value === 'anon-student' || b.value === 'anon-student', false);
+        topic.isAnonymousInstructors = topic.tags.reduce((a, b) => a || b.value === 'anon-instructor' || b.value === 'anon-instructor', false);
     }
 }
