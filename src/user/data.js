@@ -25,7 +25,7 @@ module.exports = function (User) {
         'aboutme', 'mycourses', 'signature', 'uploadedpicture', 'profileviews', 'reputation',
         'postcount', 'topiccount', 'lastposttime', 'banned', 'banned:expire',
         'status', 'flags', 'followerCount', 'followingCount', 'cover:url',
-        'cover:position', 'groupTitle', 'mutedUntil', 'mutedReason', 'isadmin',
+        'cover:position', 'groupTitle', 'mutedUntil', 'mutedReason',
     ];
 
     User.guestData = {
