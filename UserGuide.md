@@ -20,7 +20,7 @@ In the `new topic` composer pop-up, you can click on the dropdown beside the `SU
 Clicking on one of the options will add that `anonymous tag` to the list of `tags`. To delete the anonymous posting, simply delete the tag(s). 
 
 ![1](https://github.com/CMU-313/fall23-nodebb-poncho/assets/53340720/f71bd018-722d-467a-86b3-8bd20b3e6cd3)
-![2](https://github.com/CMU-313/fall23-nodebb-poncho/assets/53340720/d7c9af55-81d7-4731-9156-de5c996a3e9d)
+![273484129-d7c9af55-81d7-4731-9156-de5c996a3e9d](https://github.com/CMU-313/fall23-nodebb-poncho/assets/53340720/718f8901-2dac-4f88-8602-b312cf5b93a0)
 ![3](https://github.com/CMU-313/fall23-nodebb-poncho/assets/53340720/651bff94-064a-4567-a1a0-8ac887e7ee98)
 
 ### Technical structure
