@@ -54,6 +54,7 @@ describe('Topic\'s', () => {
             categoryId: categoryObj.cid,
             title: 'Test Topic Title',
             content: 'The content of test topic',
+            tags: ['anonymous'],
         };
     });
 
@@ -76,6 +77,22 @@ describe('Topic\'s', () => {
             }, (err, result) => {
                 assert.ifError(err);
                 assert(result);
+                topic.tid = result.topicData.tid;
+                done();
+            });
+        });
+
+        it('should create a new anonymous topic through tags with isAnonymous set to true', (done) => {
+            topics.post({
+                uid: topic.userId,
+                title: topic.title,
+                content: topic.content,
+                cid: topic.categoryId,
+                tags: topic.tags,
+            }, (err, result) => {
+                assert.ifError(err);
+                assert(result);
+                assert(result.topicData.isAnonymous);
                 topic.tid = result.topicData.tid;
                 done();
             });
