@@ -44,6 +44,10 @@ get:
                     type: string
                   isAnonymous:
                     type: boolean
+                  isAsnonymousInstructors:
+                    type: boolean
+                  isAnonymousStudents:
+                    type: boolean
                   tags:
                     type: array
                     items:
