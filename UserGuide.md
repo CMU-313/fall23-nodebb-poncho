@@ -41,11 +41,17 @@ On the other hand, any topic object without the `anonymous` tags should have `is
 
 The two-sided tests ensure our `isAnonymous` field is toggled on/off appropriately. The details of the test are implemented in `test/topics.js`, line 71-99.
 
+Furthermore, usability testing has been implemented in which there is list a checklist of actions and expected results to ensure the feature was implemented in accordance with spec. In this, the tester must verify that everything displays accordingly and mark it as so. 
+
 ## Feature 2: Star beside Instructors
 
 ### How to use
+If you are an instructor or administrator of some sort, create a post. Push the 'Submit' button. After posting, a star should render alongside your profile information of the post.
 ### Technical structure
+
 ### Testing
+
+
 
 ## Feature 2: Show courses on profile
 ### How to use
