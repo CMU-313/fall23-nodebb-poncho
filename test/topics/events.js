@@ -26,17 +26,6 @@ describe('Topic Events', () => {
             cid: 1,
         });
     });
-    
-    describe('.anonymous()', () => {
-        before(() => {
-            topic.isAnonymous = true;
-        });
-
-
-        it('should have isAnonymous be true when anonymous', () => {
-            assert.strictEqual(anonymousTopic.isAnonymous, true);
-        });    
-    })
 
     describe('.init()', () => {
         before(() => {

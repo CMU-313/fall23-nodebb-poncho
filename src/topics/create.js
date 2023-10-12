@@ -15,9 +15,6 @@ const privileges = require('../privileges');
 const categories = require('../categories');
 const translator = require('../translator');
 
-const User = module.exports;
-
-
 module.exports = function (Topics) {
     Topics.create = async function (data) {
         // This is an internal method, consider using Topics.post instead
