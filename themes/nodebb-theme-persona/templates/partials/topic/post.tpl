@@ -16,15 +16,29 @@
     <small class="pull-left">
         <!-- This segment checks if the user is anonymous or not. If the user is anonymous, it displays "Anonymous." If the user is not anonymous, it creates a link to the user's profile with the user's display name and username -->
         <strong>
-            {{isAdminOrMod}} 
             {{{if isAnonymous}}}
-            Anonymous
+                Anonymous
             {{{else}}}
-            <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+                {{{if isAnonymousStudents}}}
+                    {{{if userAdmin}}}
+                        <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+                    {{{else}}}
+                        Anonymous
+                    {{{end}}}
+                {{{else}}}
+                    {{{if isAnonymousInstructors}}}
+                        {{{if userAdmin}}}
+                            Anonymous
+                        {{{else}}}
+                            <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+                        {{{end}}}
+                    {{{else}}}
+                        <a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.displayname}</a>
+                    {{{end}}}
+                {{{end}}}
             {{{end}}}
 
         </strong>
-
 
         <!-- IMPORT partials/topic/badge.tpl -->
 

@@ -37,6 +37,8 @@ module.exports = function (Topics) {
             postcount: 0,
             viewcount: 0,
             isAnonymous: false, // User is set to "not anonymous" upon initial create but can change later.
+            isAnonymousStudents: false,
+            isAnonymousInstructors: false,
         };
 
         if (Array.isArray(data.tags) && data.tags.length) {
