@@ -42,12 +42,19 @@ On the other hand, any topic object without the `anonymous` tags should have `is
 The two-sided tests ensure our `isAnonymous` field is toggled on/off appropriately. The details of the test are implemented in `test/topics.js`, line 71-99.
 
 ## Feature 2: Star beside Instructors
+
 ### How to use
 ### Technical structure
 ### Testing
 
 ## Feature 2: Show courses on profile
 ### How to use
+In the edit page of your own user profile, there should now be a field labeled "My Courses." Within in that file, there is an 1000 word limit that allows you to manuallty type out the classes you have taken in the past. Once your edits are done, you click save, and the changes will update your profile. Then when you click back at your profile, you will now see under your username, a list of the courses you have taken.
+
 ### Technical structure
+<img width="601" alt="Screenshot 2023-10-12 at 16 19 06" src="https://github.com/RarachelLuo/fall23-nodebb-poncho/assets/83194370/288171a4-5084-4f7f-b0b9-6a4c7d8739cd">
+
 ### Testing
+
+Because this was a UI change, we have usability testing methods instead. This is found in where we list a checklist of actions and expected results to ensure the feature was implemented as intended.
 
