@@ -64,6 +64,7 @@ In the edit page of your own user profile, there should now be a field labeled "
 <img width="601" alt="Screenshot 2023-10-12 at 16 19 06" src="https://github.com/RarachelLuo/fall23-nodebb-poncho/assets/83194370/288171a4-5084-4f7f-b0b9-6a4c7d8739cd">
 
 ### Testing
-Testing case added to test/controllers.js and usability testing checklist also added to testing folder. The test added initializes a new user with courses. Then it checks that the courses inputed are correct and cases for errors.
+Testing case added to test/controllers.js and usability testing checklist also added to test folder in test/MyCoursesUsabilityTest.xlsx. 
 
+The test added initializes a new user with courses. Then it checks that the courses inputed are correct and cases for errors. The test clearly aligns with that of other user fields input testing, ensures that all the correct data is processed, and error checks. This makes it a sufficient test.
 The usability checklist writes out every step of adding courses to your profile in which our feature fullfilled every task.
