@@ -41,14 +41,19 @@ On the other hand, any topic object without the `anonymous` tags should have `is
 
 The two-sided tests ensure our `isAnonymous` field is toggled on/off appropriately. The details of the test are implemented in `test/topics.js`, line 71-99.
 
+Furthermore, usability testing has been implemented in which there is list a checklist of actions and expected results to ensure the feature was implemented in accordance with spec. In this, the tester must verify that everything displays accordingly and mark it as so. 
+
 ## Feature 2: Star beside Instructors [This feature is still in development!]
 
 ### Intended usage
 Upon submitting a reply/post as an instructor, students will see a star appearing beside the responder's icon.
 
+If you are an instructor or administrator of some sort, create a post. Push the 'Submit' button. After posting, a star should render alongside your profile information of the post. Although the code implementation for the star icon seems functional, unfortunately, the star image does not render as expected. Initially, we thought the issue was minor and planned to address it in sprint 2, but it has proven to be more complex than anticipated. Despite multiple attempts, including consulting office hours and involving various team members, we have been unable to pinpoint the problem. Consequently, we have decided to postpone the implementation of the star icon for administrators to a later phase, as the time investment required doesn't align with more impactful user experience enhancements we can prioritize, prompting us to refocus our efforts on more effective project goals.
+
 ### Technical structure
 
 ### Testing
+Since the star icon could not be implemented when run locally, we maintained to not proceed with usability testing until we reopen this issue.
 
 ## Feature 3: Show courses on profile
 ### How to use
