@@ -1727,6 +1727,20 @@ describe('Controllers', () => {
             });
         });
 
+
+        it('should parse my courses', (done) => {
+            user.setUserFields(fooUid, { mycourses: '69-420 Fake Class' }, (err) => {
+                assert.ifError(err);
+                request(`${nconf.get('url')}/api/user/foo`, { json: true }, (err, res, body) => {
+                    assert.ifError(err);
+                    assert.equal(res.statusCode, 200);
+                    assert.equal(body.mycourses, '69-420 Fake Class');
+                    done();
+                });
+            });
+        });
+
+
         it('should not return reputation if reputation is disabled', (done) => {
             meta.config['reputation:disabled'] = 1;
             request(`${nconf.get('url')}/api/user/foo`, { json: true }, (err, res, body) => {
