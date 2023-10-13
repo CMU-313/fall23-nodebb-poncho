@@ -51,6 +51,7 @@ Upon submitting a reply/post as an instructor, students will see a star appearin
 If you are an instructor or administrator of some sort, create a post. Push the 'Submit' button. After posting, a star should render alongside your profile information of the post. Although the code implementation for the star icon seems functional, unfortunately, the star image does not render as expected. Initially, we thought the issue was minor and planned to address it in sprint 2, but it has proven to be more complex than anticipated. Despite multiple attempts, including consulting office hours and involving various team members, we have been unable to pinpoint the problem. Consequently, we have decided to postpone the implementation of the star icon for administrators to a later phase, as the time investment required doesn't align with more impactful user experience enhancements we can prioritize, prompting us to refocus our efforts on more effective project goals.
 
 ### Technical structure
+<img width="763" alt="Screenshot 2023-10-12 at 23 07 55" src="https://github.com/RarachelLuo/fall23-nodebb-poncho/assets/83194370/36d278dd-9143-480f-b15d-875be076a52c">
 
 ### Testing
 Since the star icon could not be implemented when run locally, we maintained to not proceed with usability testing until we reopen this issue.
@@ -63,6 +64,6 @@ In the edit page of your own user profile, there should now be a field labeled "
 <img width="601" alt="Screenshot 2023-10-12 at 16 19 06" src="https://github.com/RarachelLuo/fall23-nodebb-poncho/assets/83194370/288171a4-5084-4f7f-b0b9-6a4c7d8739cd">
 
 ### Testing
+Testing case added to test/controllers.js and usability testing checklist also added to testing folder. The test added initializes a new user with courses. Then it checks that the courses inputed are correct and cases for errors.
 
-Because this was a UI change, we have usability testing methods instead. This is found in where we list a checklist of actions and expected results to ensure the feature was implemented as intended.
-
+The usability checklist writes out every step of adding courses to your profile in which our feature fullfilled every task.
