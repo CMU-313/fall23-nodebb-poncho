@@ -41,10 +41,13 @@ On the other hand, any topic object without the `anonymous` tags should have `is
 
 The two-sided tests ensure our `isAnonymous` field is toggled on/off appropriately. The details of the test are implemented in `test/topics.js`, line 71-99.
 
-## Feature 2: Star beside Instructors
+## Feature 2: Star beside Instructors [This feature is still in development!]
 
-### How to use
+### Intended usage
+Upon submitting a reply/post as an instructor, students will see a star appearing beside the responder's icon.
+
 ### Technical structure
+
 ### Testing
 
 ## Feature 2: Show courses on profile
