@@ -1,0 +1,13 @@
+{
+    "url": "",
+    "secret": "c5502d62-84a5-41f1-87eb-ee33a76fb7bc",
+    "database": "redis",
+    "redis": {
+      "host": "",
+      "port": "",
+      "password": "",
+      "database": "0"
+    },
+    "port": "4567"
+  }
+  
