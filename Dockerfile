@@ -4,6 +4,8 @@ RUN mkdir -p /usr/src/app && \
     chown -R node:node /usr/src/app
 WORKDIR /usr/src/app
 
+RUN apt-get update && apt-get install -y jq
+
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
 
@@ -22,4 +24,6 @@ ENV NODE_ENV=production \
 
 EXPOSE 4567
 
-CMD test -n "${SETUP}" && ./nodebb setup || node ./nodebb build; node ./nodebb start
+RUN chmod +x create_config.sh
+
+CMD  ./create_config.sh -n "${SETUP}" && ./nodebb setup || node ./nodebb build; node ./nodebb start
